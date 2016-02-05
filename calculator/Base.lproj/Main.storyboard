@@ -207,6 +207,21 @@
                                     <action selector="PlusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqg-5M-gul"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-VY-7Tt">
+                                <rect key="frame" x="358" y="333" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.83943471858638741" green="0.071482584506797425" blue="0.097413426922826202" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mai-zT-3GD"/>
+                                    <constraint firstAttribute="width" constant="46" id="uHt-lq-xLS"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="EqualsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWu-RO-bTj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brd-fL-PZI">
                                 <rect key="frame" x="196" y="181" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,21 +287,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4G-VY-7Tt">
-                                <rect key="frame" x="358" y="333" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.83943471858638741" green="0.071482584506797425" blue="0.097413426922826202" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="mai-zT-3GD"/>
-                                    <constraint firstAttribute="width" constant="46" id="uHt-lq-xLS"/>
-                                </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" title="=">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="EqualsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWu-RO-bTj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -339,6 +339,9 @@
                             <constraint firstItem="rJy-1k-8sD" firstAttribute="top" secondItem="R41-vv-zK1" secondAttribute="bottom" constant="8" id="zl3-7v-mc4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="zIg-SI-T2M" id="TTG-7u-TSE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
