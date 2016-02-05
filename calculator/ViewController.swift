@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     let MUL = 2
     let DIV = 3
     
+    let formatter = NSNumberFormatter()
+    
     
     @IBOutlet weak var resultLabel: UILabel!
 
@@ -69,11 +71,12 @@ class ViewController: UIViewController {
         secondNum = 0
         isFirst = true
         negPos = ""
+        updateLabel()
     }
     
     @IBAction func PosNegButton(sender: UIButton){
         
-        if (negPos == ""){
+        if (negPos == "" && result != "0" ){
             negPos = "-"
             
         }
@@ -228,6 +231,43 @@ class ViewController: UIViewController {
     
     
     @IBAction func EqualsButton(sender: UIButton) {
+        if(!isFirst){
+            
+            stringToNum()
+            var error = false
+            
+            switch(mathType)
+            {
+            case ADD: total = firstNum + secondNum
+                break
+            case SUB: total = firstNum - secondNum
+                break
+            case MUL: total = firstNum * secondNum
+                break
+            case DIV:
+            if(secondNum != 0){
+            total = firstNum / secondNum
+            }
+            else{
+            var error = true
+            }
+            break
+            default : break
+            }
+            if(!error){
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 5
+            
+            result = formatter.stringFromNumber(total)!
+            
+            }
+            else{
+            result = "error"
+            
+            }
+            
+            updateLabel()
+        }
         
     }
     
