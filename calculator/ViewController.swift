@@ -38,16 +38,20 @@ class ViewController: UIViewController {
     func updateLabel(){
         resultLabel.text = negPos + result
     }
-    
     func stringToNum(){
         firstNum = (result as NSString).doubleValue
-        
-        if(negPos == "-"){
-            firstNum *= -1
-            negPos = ""
-            
+        if(isFirst){
+            if(negPos == "-"){
+                firstNum *= -1
+                negPos = ""
+                
+                updateLabel()
+            }
+            isFirst = false
+            result = "0"
             updateLabel()
         }
+            
         else{
             secondNum = (result as NSString).doubleValue
             
@@ -56,8 +60,8 @@ class ViewController: UIViewController {
                 negPos = ""
                 
             }
-            isFirst = false
-            result = "0"
+            isFirst = true
+            
         }
         
     }
